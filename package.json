@@ -1,0 +1,24 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:ts": "node ./scripts/build.js",
+    "build": "zx ./scripts/compile-bin.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.11.0",
+  "type": "module",
+  "devDependencies": {
+    "esbuild": "^0.25.5",
+    "postject": "1.0.0-alpha.6",
+    "rimraf": "^6.0.1",
+    "zx": "^8.5.5"
+  },
+  "dependencies": {
+    "@types/node": "^24.0.3"
+  }
+}
