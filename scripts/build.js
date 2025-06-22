@@ -1,8 +1,12 @@
 import { build } from 'esbuild';
-import { rimrafSync, nativeSync } from 'rimraf'
+import { fs } from 'zx';
 
-rimrafSync('dist');
-nativeSync('dist');
+// Ensure clean build directory
+if (fs.existsSync('dist')) {
+    console.log('Removing existing dist directory...');
+    fs.removeSync('dist');
+}
+
 console.log('Building TypeScript project...');
 
 build({
